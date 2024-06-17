@@ -6,3 +6,4 @@ langchain_groq
 groq
 tenacity==8.3.0
 streamlit==0.81.0
+sentence-transformers

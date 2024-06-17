@@ -4,3 +4,4 @@ langchain_community
 chromadb
 langchain_groq
 groq
+tenacity

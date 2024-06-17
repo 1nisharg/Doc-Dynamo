@@ -6,7 +6,7 @@ import streamlit as st
 import PyPDF2
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores.chroma import Chroma
+from langchain_community.vectorstores import FAISS
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ChatMessageHistory, ConversationBufferMemory
 from langchain_groq import ChatGroq
@@ -68,7 +68,7 @@ if uploaded_file:
 
         
         embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", model_kwargs={'device': "cpu"})
-        docsearch = Chroma.from_texts(texts, embeddings)
+        docsearch = FAISS.from_texts(texts, embeddings)
 
     
         message_history = ChatMessageHistory()

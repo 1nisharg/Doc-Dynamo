@@ -5,5 +5,5 @@ langchain_community
 chromadb
 langchain_groq
 groq
-tenacity
+tenacity==7.0.0
 sentence-transformers
